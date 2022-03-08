@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <script
+      src="https://kit.fontawesome.com/3bd604a4cf.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="app" class="h-screen w-screen bg-gray-200 p-10">
+      <div
+        class="innerApp h-full w-full border-8 border-black grid grid-cols-10 grid-rows-5"
+      >
+        <!-- Details Class -->
+        <div
+          class="details col-span-6 row-span-4 border-b-8 border-r-8 border-black"
+        >
+          <h1 class="text-7xl font-bold px-6 pt-6">Pomodoro.</h1>
+          <p class="text-xl font-medium px-7 pt-3">
+            Fun Project by
+            <a href="#" class="text-blue-700"
+              >@<span class="underline underline-offset-1"
+                >vinaykishore</span
+              ></a
+            >
+          </p>
+        </div>
+
+        <!-- Timer -->
+        <div
+          class="timer row-start-5 row-span-6 col-span-6 border-r-8 border-black grid grid-cols-2 grid-rows-1"
+        >
+          <div class="left--box flex flex-col h-full w-full p-6">
+            <div class="message h-auto w-full border-b-4 border-black">
+              <h2 class="text-2xl font-bold pb-1">Hurray! Take a break!</h2>
+            </div>
+            <div class="time py-2">
+              <p class="time text-6xl font-sans font-bold pt-4">5:00 AM</p>
+              <p class="remainder--mess text-lg px-1 font-medium">
+                3 Incomplete works
+              </p>
+            </div>
+            <div class="timer--count mt-auto flex w-2/6 justify-evenly">
+              <div class="dot active bg-black"></div>
+              <div class="dot active"></div>
+              <div class="dot active"></div>
+              <div class="dot active"></div>
+              <div class="dot"></div>
+            </div>
+          </div>
+          <div
+            class="right--box flex flex-col h-full w-full items-center justify-center"
+          >
+            <img
+              src="assets/Play-btn.svg"
+              alt=""
+              class="img-btn hover:cursor-pointer"
+            />
+          </div>
+        </div>
+
+        <!-- Quick Settings Page -->
+        <div
+          class="quick-set h-full w-full row-start-1 col-start-7 row-span-3 col-span-4 border-b-8 border-black px-6 flex justify-evenly items-center"
+        >
+          <i class="fa-solid fa-calendar-clock"></i>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+div.innerApp {
+  grid-template-rows: repeat(10, minmax(0, 1fr));
+}
+
+div.dot {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  @apply hover:cursor-pointer;
+}
+
+div.active {
+  background-color: black;
+}
+
+img.inactive {
+  filter: opacity(1);
+}
+
+img.active {
+  filter: invert(0.3);
+}
