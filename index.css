@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 div.innerApp {
   grid-template-rows: repeat(10, minmax(0, 1fr));
 }
@@ -19,10 +15,10 @@ div.active {
   background-color: black;
 }
 
-img.inactive {
-  filter: opacity(1);
+.btn-active {
+  @apply text-cyan-700;
 }
 
-img.active {
-  filter: invert(0.3);
+div.todo {
+  grid-row: span 7 / span 7;
 }

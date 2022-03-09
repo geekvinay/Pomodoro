@@ -5,10 +5,7 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
-    <script
-      src="https://kit.fontawesome.com/3bd604a4cf.js"
-      crossorigin="anonymous"
-    ></script>
+    <script type="module"></script>
   </head>
   <body>
     <div id="app" class="h-screen w-screen bg-gray-200 p-10">
@@ -67,7 +64,59 @@
         <div
           class="quick-set h-full w-full row-start-1 col-start-7 row-span-3 col-span-4 border-b-8 border-black px-6 flex justify-evenly items-center"
         >
-          <i class="fa-solid fa-calendar-clock text-black text-xl"></i>
+          <icon-mdi-clock-time-five
+            class="text-4xl hover:cursor-pointer hover:text-cyan-700"
+          ></icon-mdi-clock-time-five>
+          <icon-mdi-alarm
+            class="text-4xl hover:cursor-pointer hover:text-cyan-700"
+          ></icon-mdi-alarm>
+          <icon-mdi-format-list-numbered
+            class="text-4xl hover:cursor-pointer hover:text-cyan-700 btn-active"
+          ></icon-mdi-format-list-numbered>
+          <icon-mdi-weather-lightning
+            class="text-4xl hover:cursor-pointer hover:text-cyan-700"
+          ></icon-mdi-weather-lightning>
+          <icon-mdi-brightness-7
+            class="text-4xl hover:cursor-pointer hover:text-cyan-700"
+          ></icon-mdi-brightness-7>
+        </div>
+
+        <!-- Todo Part of the site -->
+        <div class="todo col-start-7 row-start-4 col-span-4 relative">
+          <p
+            class="hero-date text-xl font-medium tracking-widest absolute top-0 left-0 pt-2 pl-6"
+          >
+            28/02/2002
+          </p>
+          <div
+            class="heading border-8 border-black bg-gray-200 backdrop-opacity-100 w-fit px-6 py-2 absolute top-0 right-0 transform -translate-x-1/4 -translate-y-1/2"
+          >
+            <h2 class="text-3xl font-bold uppercase">TO-DO List</h2>
+          </div>
+
+          <!-- Todo List -->
+          <div class="todo-list h-full w-full pt-10 px-5">
+            <ul class="list-none py-4">
+              <li class="flex items-center px-5 pt-4">
+                <input
+                  type="checkbox"
+                  name="task-1"
+                  id="task-1"
+                  class="bg-transparent w-4 h-4"
+                />
+                <p class="text-xl font-medium px-4">Complete the homework</p>
+              </li>
+              <li class="flex items-center px-5 pt-4">
+                <input
+                  type="checkbox"
+                  name="task-1"
+                  id="task-1"
+                  class="bg-transparent w-4 h-4 rounded-none"
+                />
+                <p class="text-xl font-medium px-4">Complete the homework</p>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
