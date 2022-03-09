@@ -95,27 +95,59 @@
           </div>
 
           <!-- Todo List -->
-          <div class="todo-list h-full w-full pt-10 px-5">
-            <ul class="list-none py-4">
+          <div class="todo-list h-full w-full pt-10 px-5 flex flex-col">
+            <ul
+              class="list-active pt-4 border-b-black flex flex-col items-start"
+            >
               <li class="flex items-center px-5 pt-4">
                 <input
                   type="checkbox"
                   name="task-1"
                   id="task-1"
-                  class="bg-transparent w-4 h-4"
+                  class="bg-transparent w-4 h-4 border checked:bg-black"
                 />
-                <p class="text-xl font-medium px-4">Complete the homework</p>
+                <p class="text-xl font-medium px-4">
+                  Complete the homework today itself
+                </p>
               </li>
               <li class="flex items-center px-5 pt-4">
                 <input
                   type="checkbox"
                   name="task-1"
                   id="task-1"
-                  class="bg-transparent w-4 h-4 rounded-none"
+                  class="bg-transparent w-4 h-4 checked:bg-black"
                 />
-                <p class="text-xl font-medium px-4">Complete the homework</p>
+                <p class="text-xl font-medium px-4">
+                  Complete the DBMS project today
+                </p>
+              </li>
+              <li
+                class="last-element w-[95%] h-[5px] mx-auto my-4 bg-black"
+              ></li>
+            </ul>
+            <ul class="list-inactive border-b-black flex flex-col items-start">
+              <li class="list-inactive flex items-center px-5">
+                <input
+                  type="checkbox"
+                  name="task-1"
+                  id="task-1"
+                  checked="true"
+                  disabled
+                  class="bg-transparent w-4 h-4 border checked:bg-gray-600"
+                />
+                <p class="text-xl text-gray-600 font-medium px-4 line-through">
+                  Complete the homework today itself
+                </p>
               </li>
             </ul>
+            <div class="input-task mx-auto mt-auto mb-7 w-[90%] h-max relative">
+              <input
+                type="text"
+                name="task-input"
+                id="task-input"
+                class="h-10 bg-transparent w-full border-4 border-black pl-10"
+              />
+            </div>
           </div>
         </div>
       </div>
