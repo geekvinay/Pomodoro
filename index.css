@@ -16,7 +16,7 @@ div.active {
 }
 
 .btn-active {
-  @apply text-cyan-700;
+  @apply text-cyan-500;
 }
 
 div.todo {

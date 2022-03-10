@@ -19,7 +19,7 @@
           <h1 class="text-7xl font-bold px-6 pt-6">Pomodoro.</h1>
           <p class="text-xl font-medium px-7 pt-3">
             Fun Project by
-            <a href="#" class="text-blue-700"
+            <a href="https://twitter.com/_vinaykishore" class="text-blue-700"
               >@<span class="underline underline-offset-1"
                 >vinaykishore</span
               ></a
@@ -35,17 +35,26 @@
             <div class="message h-auto w-full border-b-4 border-black">
               <h2 class="text-2xl font-bold pb-1">Hurray! Take a break!</h2>
             </div>
-            <div class="time py-2">
-              <p class="time text-6xl font-sans font-bold pt-4">5:00 AM</p>
+            <div id="time--container" class="time--container py-2">
+              <p id="time--hero" class="time text-6xl font-sans font-bold pt-4">
+                5:00 AM
+              </p>
+              <p
+                id="timer--hero"
+                class="timer hidden text-6xl font-sans font-bold pt-4"
+              >
+                30:00:00
+              </p>
               <p class="remainder--mess text-lg px-1 font-medium">
                 3 Incomplete works
               </p>
             </div>
             <div class="timer--count mt-auto flex w-2/6 justify-evenly">
-              <div class="dot active bg-black"></div>
-              <div class="dot active"></div>
-              <div class="dot active"></div>
-              <div class="dot active"></div>
+              <div class="dot" data-src="1"></div>
+              <div class="dot" data=""></div>
+              <div class="dot" data=""></div>
+              <div class="dot" data=""></div>
+              <div class="dot" data=""></div>
               <div class="dot"></div>
             </div>
           </div>
@@ -145,8 +154,15 @@
                 type="text"
                 name="task-input"
                 id="task-input"
-                class="h-10 bg-transparent w-full border-4 border-black pl-10"
+                class="h-10 bg-transparent w-full border-4 border-black pl-12"
               />
+              <button
+                class="bg-black absolute h-10 w-10 top-0 left-0 flex justify-center items-center"
+              >
+                <icon-mdi-check-bold
+                  class="text-2xl text-white"
+                ></icon-mdi-check-bold>
+              </button>
             </div>
           </div>
         </div>
