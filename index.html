@@ -33,7 +33,9 @@
         >
           <div class="left--box flex flex-col h-full w-full p-6">
             <div class="message h-auto w-full border-b-4 border-black">
-              <h2 class="text-2xl font-bold pb-1">Hurray! Take a break!</h2>
+              <h2 class="text-2xl font-bold pb-1" id="message--hero">
+                Hurray! Take a break!
+              </h2>
             </div>
             <div id="time--container" class="time--container py-2">
               <p id="time--hero" class="time text-6xl font-sans font-bold pt-4">
@@ -43,7 +45,7 @@
                 id="timer--hero"
                 class="timer hidden text-6xl font-sans font-bold pt-4"
               >
-                30:00:00
+                30:00
               </p>
               <p class="remainder--mess text-lg px-1 font-medium">
                 3 Incomplete works
@@ -65,6 +67,7 @@
               src="assets/Play-btn.svg"
               alt=""
               class="img-btn hover:cursor-pointer"
+              data-src="assets/Pause-btn.svg"
             />
           </div>
         </div>
@@ -74,19 +77,19 @@
           class="quick-set h-full w-full row-start-1 col-start-7 row-span-3 col-span-4 border-b-8 border-black px-6 flex justify-evenly items-center"
         >
           <icon-mdi-clock-time-five
-            class="text-4xl hover:cursor-pointer hover:text-cyan-700"
+            class="text-4xl hover:cursor-pointer hover:text-blue-700 transition-colors ease-in-out duration-500"
           ></icon-mdi-clock-time-five>
           <icon-mdi-alarm
-            class="text-4xl hover:cursor-pointer hover:text-cyan-700"
+            class="text-4xl hover:cursor-pointer hover:text-blue-700 transition-colors ease-in-out duration-500"
           ></icon-mdi-alarm>
           <icon-mdi-format-list-numbered
-            class="text-4xl hover:cursor-pointer hover:text-cyan-700 btn-active"
+            class="text-4xl hover:cursor-pointer hover:text-blue-700 btn-active transition-colors ease-in-out duration-500"
           ></icon-mdi-format-list-numbered>
           <icon-mdi-weather-lightning
-            class="text-4xl hover:cursor-pointer hover:text-cyan-700"
+            class="text-4xl hover:cursor-pointer hover:text-blue-700 transition-colors ease-in-out duration-500"
           ></icon-mdi-weather-lightning>
           <icon-mdi-brightness-7
-            class="text-4xl hover:cursor-pointer hover:text-cyan-700"
+            class="text-4xl hover:cursor-pointer hover:text-blue-700 transition-colors ease-in-out duration-500"
           ></icon-mdi-brightness-7>
         </div>
 
@@ -94,6 +97,7 @@
         <div class="todo col-start-7 row-start-4 col-span-4 relative">
           <p
             class="hero-date text-xl font-medium tracking-widest absolute top-0 left-0 pt-2 pl-6"
+            id="date--hero"
           >
             28/02/2002
           </p>

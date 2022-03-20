@@ -49,10 +49,17 @@ function setDotActive(n) {
 
 // Connecting time with API
 let timeHero = document.querySelector("#time--hero");
-let hours, mins, seconds, meridiem, activeDotCount;
+let dateHero = document.querySelector("#date--hero");
+console.log(dateHero);
+let hours, mins, seconds, meridiem, activeDotCount, startFlag = false, btnCount = 0, intervalFunc;
+let todayTime = new Date();
+// Main logic
+let timerTime = 1;
+let timeInSec = timerTime * 60;
+let remMin, remSec;
 
 function getTime() {
-    let todayTime = new Date();
+    dateHero.textContent = `${todayTime.getDate()}/${todayTime.getMonth().toString().padStart(2, '0')}/${todayTime.getFullYear()}`;
     hours = todayTime.getHours();
     mins = todayTime.getMinutes();
     seconds = todayTime.getSeconds();
@@ -79,3 +86,40 @@ clearInterval(gettingTime);
 setDotActive(0);
 console.log(timerContainer);
 // timerContainer.
+
+let startBtn = document.querySelector('.right--box').querySelector('img');
+let messageHero = document.querySelector('#message--hero');
+let temp;
+console.log(startBtn);
+startBtn.addEventListener('click', function (e) {
+    // Preventing the default action of the btn
+    e.preventDefault();
+    btnCount++;
+    // Interchanging the play button with the pause button
+    if (startFlag == false) {
+        startFlag = true;
+        temp = startBtn.src;
+        startBtn.src = startBtn.dataset.src;
+        startBtn.dataset.src = temp;
+        intervalFunc = setInterval(() => {
+            timeInSec--;
+            if (timeInSec < 0) {
+                messageHero.textContent = `Time up, Take a Break 😍`;
+                intervalFunc.clearInterval();
+            }
+            remMin = Math.floor(timeInSec / 60).toString().padStart(2, '0');
+            remSec = Math.floor(timeInSec % 60).toString().padStart(2, '0');
+            timerHero.textContent = `${remMin}:${remSec}`;
+        }, 1000);
+
+    }
+    else if (startFlag == true) {
+        startFlag = false;
+        temp = startBtn.src;
+        startBtn.src = startBtn.dataset.src;
+        startBtn.dataset.src = temp;
+        if (timeInSec > 0) {
+            intervalFunc.clearInterval();
+        }
+    }
+});
